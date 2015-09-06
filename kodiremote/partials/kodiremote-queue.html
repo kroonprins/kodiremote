@@ -1,0 +1,40 @@
+<div class="row dark">
+	<div class="col-xs-1 col-xs-offset-4">
+		<button ng-click="start()" class="glyphicon glyphicon-play button button-dark text-light no-top"></button>
+	</div>
+	<div class="col-xs-1">
+		<button ng-click="stop()" class="col-xs-1 glyphicon glyphicon-stop button button-dark text-light no-top"></button>
+	</div>
+	<div class="col-xs-1">
+		<button ng-click="playerAction('PlayPause',{})" class="col-xs-1 glyphicon glyphicon-pause button button-dark text-light no-top"></button>
+	</div>
+	<div class="col-xs-1">
+		<button ng-click="playerAction('GoTo',{to:1})" class="col-xs-1 glyphicon glyphicon-step-forward button button-dark text-light no-top"></button>
+	</div>
+	<div class="col-xs-1 col-xs-offset-3 col-no-right-padding">
+		<button onclick="window.location.href='#/search'" class="col-xs-1 glyphicon glyphicon-search button button-dark text-light no-top pull-right"></button>
+	</div>
+</div>
+<div class="row" ng-repeat="item in kodiresponse.result.items">
+	<div class="col-xs-1 col-no-left-padding">
+		<a ng-href="#/song/{{item.id}}" class="thumb-link dark">
+			<img ng-src="{{item.thumbnail | thumbnailer}}" class="thumb-img"/>
+		</a>
+	</div>
+	<div class="col-xs-10">
+		<div class="col-xs-12">
+			<span>{{item.label}}</span> - <span>{{item.artist | listToString}}</span>
+		</div>
+		<div class="col-xs-10">
+			<span class="text-light">{{item.album}}</span>
+		</div>
+		<div class="col-xs-2">
+			<span class="text-light pull-right">{{item.duration | duration_SecondsToFormatted}}</span>
+		</div>
+	</div>
+	<div class="col-xs-1 col-no-right-padding">
+		<button ng-click="removeItemFromPlayQueue($index)" class="glyphicon glyphicon-remove button button-dark pull-right text-light no-top"></button>
+	</div>
+</div>
+<div class="row dark">
+</div>

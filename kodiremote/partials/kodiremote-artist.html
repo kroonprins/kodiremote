@@ -1,0 +1,43 @@
+<div class="x">
+  <div class="x">
+    <div class="kodisong">
+      <!--Body content-->
+
+      <div class="actions actions-top">
+      </div>
+
+      <div class="songDetail">
+	      <table class="song generalTable">
+		      <tr class="row row0">
+			      <td class="column column0">Song</td>
+			      <td class="column column1">{{songDetail.label}}</td>
+		      </tr>
+		      <tr class="row row1">
+			      <td class="column column0">Artist</td>
+			      <td class="column column1">
+				      <a ng-repeat="artist in songDetail.artistExtended" ng-href="#/artist/{{artist.id}}">{{artist.label}}</a>
+			      </td>
+		      </tr>
+		      <tr class="row row2">
+			      <td class="column column0">Album</td>
+			      <td class="column column1">
+				      <a ng-href="#/album/{{songDetail.albumid}}" class="link linkalbum">
+					      {{songDetail.album}}
+				      </a>
+			      </td>
+		      </tr>
+		      <tr class="row row3">
+			      <td class="column column0">Duration</td>
+			      <td class="column column1">{{songDetail.duration | duration_SecondsToFormatted}}</td>
+		      </tr>
+	      </table>
+
+	      <img ng-src="{{songDetail.thumbnail | thumbnailer}}" class="thumb-img"/>
+      </div>
+
+      <div class="actions actions-bottom">
+      </div>
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,212 @@
+/* app css stylesheet */
+
+html, body {
+	background-color:#E7E8E8;
+	height:100%;
+}
+.view-container {
+	height:100%;
+}
+.view-container>.global-layout {
+	width:100%;
+	min-height:100%;
+}
+.view-container>.global-layout .global-layout-row0,
+.view-container>.global-layout .global-layout-row2 {
+	height:50px;
+}
+.view-container>.global-layout .global-layout-row>.global-layout-column {
+	width:10%;
+}
+.view-container>.global-layout .global-layout-row1>.global-layout-column1 {
+	width:80%;
+	min-height:100%;
+}
+.view-container>.global-layout .global-layout-column1 {
+	background-color:#E1E2E2;
+}
+
+.kodiqueue {
+}
+
+.kodiqueue>.queue,
+.songs {
+	width:100%;
+}
+.actions {
+	width:100%;
+	text-align:center;
+	height:50px;
+	background-color:#DADBDB;
+	clear:right;
+}
+.actions>button {
+	outline: 0;
+	border: 0;
+	height:100%;
+	min-width:50px;
+	background-color:#DADBDB;
+}
+.actions>button:hover {
+	background-color:#E1E2E2;
+}
+
+.kodiqueue>.queue .row,
+.songs .row {
+	height:50px;
+}
+
+.kodiqueue>.queue .column.thumb,
+.songs .column.thumb {
+	width:50px;
+	height:100%;
+}
+.kodiqueue>.queue .column.track,
+.songs .column.track {
+	padding-left:15px;
+}
+.kodiqueue>.queue .column.action,
+.songs .column.action {
+	width:50px;
+	height:100%;
+	padding-left:15px;
+}
+.kodiqueue>.queue .column.action>button,
+.songs .column.action>button {
+	width:50px;
+	height:100%;
+	min-height:50px;
+	background-color:#DADBDB;
+	outline: 0;
+	border: 0;
+	color:#DADBDB;
+	font-size:200%;
+	padding-bottom:0px;
+	padding-top:0px;
+	padding-right:0px;
+	padding-left:0px;
+}
+.kodiqueue>.queue .column.action>button:hover,
+.songs .column.action>button:hover {
+	background-color:#E1E2E2;
+	color:#AEAFAF;
+}
+.kodiqueue>.queue .column.track>.second_line,
+.songs .column.track>.second_line {
+	color:#8D8E8E;
+	display:block;
+}
+.kodiqueue>.queue .column.track>.second_line>.duration,
+.songs .column.track>.second_line>.duration {
+	float:right;
+}
+
+.kodiqueue>.queue .row.nonheader>.thumb,
+.songs .row.nonheader>.thumb {
+	background-color:#DADBDB;
+}
+.kodiqueue>.queue .row.nonheader>.thumb:hover,
+.songs .row.nonheader>.thumb:hover {
+	background-color:#E1E2E2;
+}
+.kodiqueue>.queue .row>.thumb>.thumb-link,
+.songs .row>.thumb>.thumb-link {
+	width:50px;
+	height:50px;
+	font-size:130%;
+	outline: 0;
+	border: 0;
+	padding-bottom:0px;
+	padding-top:0px;
+	padding-right:0px;
+	padding-left:0px;
+	text-align:center;
+	display:block;
+	line-height:50px;
+}
+.kodiqueue>.queue .row>.thumb>.thumb-link>.thumb-img,
+.songs .row>.thumb>.thumb-link>.thumb-img {
+	max-width:50px;
+	max-height:50px;
+}
+.kodiqueue>.queue .row>.thumb>.thumb-link>.thumb-img:hover,
+.songs .row>.thumb>.thumb-link>.thumb-img:hover {
+	opacity:0.2;
+}
+
+.kodisong>.songDetail,
+.kodialbum>.albumDetail {
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:50px;
+	padding-bottom:50px;
+}
+.kodisong>.songDetail>.song,
+.kodialbum>.albumDetail>.album {
+	display: inline;
+	border: 0px;
+	padding-right:10%;
+	vertical-align:top;
+}
+.kodisong>.songDetail>.song .row>.column,
+.kodialbum>.albumDetail>.album .row>.column {
+	padding-top:5px;
+}
+.kodisong>.songDetail>.song .row>.column,
+.kodialbum>.albumDetail>.album .row>.column {
+	border: 0px;
+}
+.kodisong>.songDetail>.song .row>.column0,
+.kodialbum>.albumDetail>.album .row>.column0 {
+	color:#6D6E6E;
+	width: 100px;
+}
+.kodisong>.songDetail>.song .row>.column1,
+.kodialbum>.albumDetail>.album .row>.column1 {
+}
+.kodisong>.songDetail>.thumb-img,
+.kodialbum>.albumDetail>.thumb-img {
+	display:inline;
+	max-width:300px;
+	float:right;
+	padding-bottom:50px;
+}
+.kodisong a,
+.kodialbum a {
+	color:#6D6E6E;
+	text-decoration:none;
+}
+.kodisong a:hover,
+.kodialbum a:hover {
+	color:black;
+	text-decoration:none;
+}
+
+/* Added since bootstrap */
+.thumb-img, .button, .thumb-link {
+	height: 50px;
+	width: 50px;
+}
+.text-light {
+	color:#6D6E6E;
+}
+.dark {
+	background-color:#DADBDB;
+}
+.button-dark {
+	outline: 0;
+	border: 0;
+	background-color:#DADBDB;
+}
+.col-no-right-padding {
+	padding-right: 0px;
+}
+.col-no-left-padding {
+	padding-left: 0px;
+}
+.row {
+	min-height: 50px;
+}
+.no-top {
+	top: 0px;
+}

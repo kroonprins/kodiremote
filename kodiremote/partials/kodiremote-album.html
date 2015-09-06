@@ -1,0 +1,61 @@
+<div class="x">
+  <div class="x">
+    <div class="kodialbum">
+      <!--Body content-->
+
+      <div class="actions actions-top">
+      </div>
+
+      <div class="albumDetail">
+	      <table class="album generalTable">
+		      <tr class="row row0">
+			      <td class="column column0">Album</td>
+			      <td class="column column1">{{albumDetail.label}}</td>
+		      </tr>
+		      <tr class="row row1">
+			      <td class="column column0">Artist</td>
+			      <td class="column column1">
+				      <a ng-repeat="artist in albumDetail.artistExtended" ng-href="#/artist/{{artist.id}}">{{artist.label}}</a>
+			      </td>
+		      </tr>
+		      <tr class="row row2">
+			      <td class="column column0">Year</td>
+			      <td class="column column1">{{albumDetail.year}}</td>
+		      </tr>
+		      <tr class="row row3">
+			      <td class="column column0">Play count</td>
+			      <td class="column column1">{{albumDetail.playcount}}</td>
+		      </tr>
+	      </table>
+
+	      <img ng-src="{{albumDetail.thumbnail | thumbnailer}}" class="thumb-img"/>
+      </div>
+
+      <div class="actions actions-songs">
+	      <button ng-click="startAlbum(albumDetail.albumid)" class="button">Play</button>
+	      <button ng-click="addItemToPlayQueue({'albumid':albumDetail.albumid})" class="button">+</button>
+      </div>
+
+      <table class="songs generalTable">
+              <tr ng-repeat="item in albumSongs" class="nonheader row">
+                        <td class="column thumb">
+				<a ng-href="#/song/{{item.songid}}" class="thumb-link">
+					{{$index + 1}}
+				</a>
+                        </td>
+                        <td class="column track">
+                                <span class="first_line"><span class="song">{{item.label}}</span> - <span class="artist">{{item.artist | listToString}}</span></span>
+                                <span class="second_line"><span class="album second_line">{{item.album}}</span><span class="duration">{{item.duration | duration_SecondsToFormatted}}</span></span>
+                        </td>
+                        <td class="column action">
+				<button ng-click="addItemToPlayQueue({'songid':item.songid})" class="button">+</button>
+                        </td>
+              </tr>
+      </table>
+
+      <div class="actions actions-bottom">
+      </div>
+      
+    </div>
+  </div>
+</div>

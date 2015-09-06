@@ -1,0 +1,52 @@
+<div class="x">
+  <div class="x">
+    <div class="kodisearch">
+      <!--Body content-->
+
+      <div class="actions actions-top">
+	      <input ng-model="query">
+      </div>
+
+      <table class="songs generalTable">
+              <tr ng-repeat="item in allAlbums | filter:query" class="nonheader row">
+                        <td class="column thumb">
+				<a ng-href="#/album/{{item.albumid}}" class="thumb-link">
+					<img ng-src="{{item.thumbnail | thumbnailer}}" class="thumb-img"/>
+				</a>
+                        </td>
+                        <td class="column track">
+                                <span class="first_line"><span class="song">{{item.label}}</span> - <span class="artist">{{item.artist | listToString}}</span></span>
+                        </td>
+                        <td class="column action">
+				<button ng-click="addItemToPlayQueue({'albumid':item.albumid})" class="button">+</button>
+                        </td>
+              </tr>
+      </table>
+
+      <div class="actions actions-bottom">
+      </div>
+
+<!--
+      <table class="songs generalTable">
+              <tr ng-repeat="item in allSongs | filter:query" class="nonheader row">
+                        <td class="column thumb">
+				<a ng-href="#/album/{{item.albumid}}" class="thumb-link">
+					<img ng-src="{{item.thumbnail | thumbnailer}}" class="thumb-img"/>
+				</a>
+                        </td>
+                        <td class="column track">
+                                <span class="first_line"><span class="song">{{item.label}}</span> - <span class="artist">{{item.artist | listToString}}</span></span>
+                        </td>
+                        <td class="column action">
+				<button ng-click="addItemToPlayQueue({'songid':item.songid})" class="button">+</button>
+                        </td>
+              </tr>
+      </table>
+
+      <div class="actions actions-bottom">
+      </div>
+-->
+      
+    </div>
+  </div>
+</div>
